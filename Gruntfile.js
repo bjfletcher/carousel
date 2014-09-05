@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     },
     watch: {
       options: {
-        livereload: 35729
+        livereload: '<%= connect.server.options.livereload %>'
       },
       html: {
         files: ['*.html']
