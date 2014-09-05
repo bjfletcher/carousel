@@ -1,0 +1,24 @@
+{
+  "name": "carousel",
+  "version": "0.0.0",
+  "description": "",
+  "main": "carousel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "karma": "^0.12.23",
+    "grunt-karma": "^0.9.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-sass": "^0.14.1",
+    "load-grunt-tasks": "^0.6.0",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
+    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
