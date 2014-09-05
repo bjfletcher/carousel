@@ -20,7 +20,10 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      karma: {
+      options: {
+        livereload: 35729
+      },
+      js: {
         files: ['*.js'],
         tasks: ['jshint', 'karma:watch:run']
       },
@@ -28,9 +31,27 @@ module.exports = function (grunt) {
         files: ['*.scss'],
         tasks: ['sass']
       }
+    },
+    connect: {
+      server: {
+        options: {
+          keepalive: true,
+          livereload: 35729
+        }
+      }
+    },
+    concurrent: {
+      all: {
+        tasks: ['server', 'spy'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
     }
   });
   
-  grunt.registerTask('default', ['karma:watch:start', 'watch:karma']);
+  grunt.registerTask('default', ['concurrent:all']);
+  grunt.registerTask('server', ['connect:server']);
+  grunt.registerTask('spy', ['karma:watch:start', 'watch']);
 
 };

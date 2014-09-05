@@ -5,6 +5,5 @@ var Carousel = function(el) {
 Carousel.prototype = {
   constructor: Carousel,
   init: function() {
-    console.debug(el + "test");
   }
 };
