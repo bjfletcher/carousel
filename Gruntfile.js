@@ -8,7 +8,9 @@ module.exports = function (grunt) {
     },
     sass: {
       dist: {
-        'carousel.css': 'carousel.scss'
+        files: {
+          'carousel.css': 'carousel.scss'
+        }
       }
     },
     karma: {
