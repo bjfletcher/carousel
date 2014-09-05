@@ -23,6 +23,9 @@ module.exports = function (grunt) {
       options: {
         livereload: 35729
       },
+      html: {
+        files: ['*.html']
+      },
       js: {
         files: ['*.js'],
         tasks: ['jshint', 'karma:watch:run']
